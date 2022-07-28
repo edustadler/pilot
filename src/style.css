@@ -16,6 +16,11 @@ body {
 section {
   padding: 50px 80px;
 }
+@media (max-width: 767px) {
+  section {
+    padding: 20px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -27,10 +32,22 @@ h1 {
   text-align: center;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+  }
+}
 
 h2 {
   font-family: "Inter", sans-serif;
+  color: #fff;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 #first {
@@ -39,6 +56,9 @@ h2 {
 
 #second {
   width: 100%;
+}
+#second h2 {
+  text-align: center;
 }
 
 .highlight {
@@ -54,11 +74,6 @@ h2 {
   display: flex;
   padding-top: 150px;
 }
-@media (max-width: 767px) {
-  .company-box {
-    display: initial;
-  }
-}
 .company-box .company-content {
   color: #fff;
 }
@@ -66,10 +81,17 @@ h2 {
 .company-box .company-effect {
   width: 50%;
 }
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .company-box .company-content,
 .company-box .company-effect {
     width: 100%;
+    margin-top: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .company-box {
+    display: block;
+    padding-top: 35px;
   }
 }
 
@@ -235,6 +257,13 @@ h2 {
   position: absolute;
   width: 69%;
 }
+@media (max-width: 767px) {
+  .modal {
+    left: 0;
+    width: 100%;
+    top: 60%;
+  }
+}
 
 .interior-modal {
   background: #fcf7f1;
@@ -348,10 +377,23 @@ p.modal-p {
   margin-left: 42px;
   padding-top: 150px;
 }
+@media (max-width: 767px) {
+  .websites {
+    display: block;
+    margin-left: initial;
+    padding-top: 60px;
+  }
+}
 
 .left-web,
 .right-web {
   width: 50%;
+}
+@media (max-width: 767px) {
+  .left-web,
+.right-web {
+    width: 100%;
+  }
 }
 
 /*SNIPPET BY MY CODEPEN*/
@@ -390,7 +432,7 @@ ul.ul-port li.item-port {
   display: block;
   font-family: "Belleza", sans-serif;
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   text-align: left;
   -webkit-text-stroke: 1px #fff;
   color: transparent;
@@ -398,6 +440,11 @@ ul.ul-port li.item-port {
   text-align: center;
   z-index: 1;
   padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  ul.ul-port li.item-port {
+    font-size: 32px;
+  }
 }
 
 img.img-port {
@@ -412,6 +459,14 @@ img.img-port {
   opacity: 0;
   visibily: hidden;
   pointer-events: none;
+}
+@media (max-width: 767px) {
+  img.img-port {
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

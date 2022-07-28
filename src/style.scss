@@ -29,6 +29,9 @@ body {
 
 section {
     padding: 50px 80px;
+    @media (max-width: 767px) {
+        padding: 20px;
+    }
 }
 
 a {
@@ -40,11 +43,21 @@ h1 {
     font-size: 46px;
     text-align: center;
     font-weight: 500;
+
+    @media (max-width: 767px) {
+        font-size: 36px;
+    }
 }
 
 h2 {
     font-family: $second-font;
+    color: $light-color;
     font-weight: 500;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 #first {
@@ -53,6 +66,10 @@ h2 {
 
 #second {
     width: 100%;
+
+    h2 {
+        text-align: center;
+    }
 }
 
 .highlight {
@@ -65,9 +82,6 @@ h2 {
 }
 
 .company-box {
-    @media (max-width: 767px) {
-        display: initial;
-    }
 
     display: flex;
     padding-top: 150px;
@@ -81,9 +95,15 @@ h2 {
     .company-effect {
         width: 50%;
 
-        @media (max-width: 767px) {
+        @media only screen and (max-width: 767px) {
             width: 100%;
+            margin-top: 80px;
         }
+    }
+
+    @media only screen and (max-width: 767px) {
+        display: block;
+        padding-top: 35px;
     }
 }
 
@@ -258,6 +278,12 @@ h2 {
     display: none;
     position: absolute;
     width: 69%;
+
+    @media (max-width: 767px) {
+        left: 0;
+        width: 100%;
+        top: 60%;
+    }
 }
 
 .interior-modal {
@@ -372,12 +398,22 @@ p.modal-p {
     display: flex;
     margin-left: 42px;
     padding-top: 150px;
+
+    @media (max-width: 767px) {
+        display: block;
+        margin-left: initial;
+        padding-top: 60px;
+    }
 }
 
 
 .left-web,
 .right-web {
     width: 50%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 
@@ -424,7 +460,7 @@ ul.ul-port {
         display: block;
         font-family: "Belleza", sans-serif;
         position: relative;
-        font-size: 80px;
+        font-size: 50px;
         text-align: left;
         -webkit-text-stroke: 1px #fff;
         color: transparent;
@@ -432,6 +468,10 @@ ul.ul-port {
         text-align: center;
         z-index: 1;
         padding: 20px;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -447,4 +487,11 @@ img.img-port {
     opacity: 0;
     visibily: hidden;
     pointer-events: none;
+
+    @media (max-width: 767px) {
+        top: 50%;
+        right: -50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
 }
