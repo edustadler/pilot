@@ -1,0 +1,426 @@
+$dark-color: #080010;
+$light-color: #fff;
+$pink-color: #ec4899;
+$purple-color: #8b5cf6;
+$soft--green-color: #1fe45d;
+$green-color: #17bf81;
+$orange-color: #e15916;
+$salmon-color: #a62c4a;
+$soft--blue-color: #0f91b3;
+$heavy--blue-color: #0047ff;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $dark-color;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 50px 80px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 46px;
+    text-align: center;
+}
+
+#first {
+    width: 100%;
+}
+
+#second {
+    width: 100%;
+}
+
+.highlight {
+    background: linear-gradient(359deg, $pink-color, $purple-color);
+    text-fill-color: transparent;
+    background-clip: text;
+    background: -webkit-linear-gradient(359deg, $pink-color, $purple-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.company-box {
+    display: flex;
+    padding-top: 150px;
+
+    .company-content {
+        color: $light-color;
+    }
+
+    .company-content,
+    .company-effect {
+        width: 50%;
+    }
+}
+
+//* animation*//
+
+#drag-container,
+#spin-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+}
+
+#drag-container img,
+#drag-container video {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+    -webkit-box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+
+    &:hover {
+        -webkit-box-shadow: 0 0 15px #fffd;
+        box-shadow: 0 0 15px #fffd;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+    }
+}
+
+#drag-container p {
+    p {
+        font-family: Serif;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+        transform: translate(-50%, -50%) rotateX(90deg);
+        color: #fff;
+    }
+}
+
+#ground {
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spinRevert {
+    from {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+    to {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes spinRevert {
+    from {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+    to {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+}
+
+#myImg,
+#myImg2,
+#myImg3,
+#myImg4,
+#myImg5,
+#myImg6,
+#myImg7 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg {
+    width: 20%;
+    background: $purple-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+#myImg2 {
+    background-color: $soft--blue-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+#myImg3 {
+    background: $green-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+#myImg4 {
+    background: $soft--green-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+#myImg5 {
+    background-color: $orange-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+#myImg6 {
+    background-color: $salmon-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+#myImg7 {
+    background: $pink-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.modal {
+    left: 37%;
+    top: 25%;
+    display: none;
+    position: absolute;
+    width: 69%;
+}
+
+.interior-modal {
+    background: #fcf7f1;
+    position: relative;
+    width: 65%;
+    padding: 55px 85px;
+    margin: 0% auto;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+h3.titulo-modal {
+    font-family: "Gooper", Sans-serif;
+    text-align: left;
+    font-size: 67px;
+    margin-top: 65px;
+    margin-bottom: 12px;
+}
+
+.modal-content {
+    margin: 0 auto;
+    display: initial;
+    width: 30%;
+    float: left;
+    max-width: 700px;
+}
+p.modal-p {
+    font-family: "CartographCF", Sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    word-break: break-word;
+}
+
+.modal-text {
+    float: left;
+    width: 50%;
+    display: block;
+    position: relative;
+    margin-left: 70px;
+    margin-top: -75px;
+}
+
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7 {
+    font-family: "Gooper", Sans-serif;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7:hover,
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.websites {
+    display: flex;
+    margin-left: 42px;
+}
+
+
+.left-web,
+.right-web {
+    width: 50%;
+}
+
+
+
+/*SNIPPET BY MY CODEPEN*/
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 60%;
+        margin-bottom: -50px;
+        float: inherit;
+    }
+
+    .modal-text {
+        float: initial;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .interior-modal {
+        width: 90%;
+        padding: 55px 16px;
+    }
+
+    h3.titulo-modal {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    p.modal-p {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+ul.ul-port {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li.item-port {
+        display: block;
+        font-family: "Belleza", sans-serif;
+        position: relative;
+        font-size: 80px;
+        text-align: left;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        margin-bottom: 80px;
+        text-align: center;
+        z-index: 1;
+        padding: 20px;
+    }
+}
+
+img.img-port {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    transform: translateX(25%) translateY(-45%);
+    top: 50%;
+    right: 0;
+    z-index: -10;
+    opacity: 0;
+    visibily: hidden;
+    pointer-events: none;
+}
