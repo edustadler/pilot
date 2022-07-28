@@ -204,6 +204,6 @@ items.forEach((el) => {
   })
 
   el.addEventListener('', (e) => {
-    gsap.set(image, { x: e.offsetX - 200 })
+    gsap.set(image, { x: e.offsetX - 00 })
   })
 })

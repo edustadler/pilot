@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500&display=swap");
+/*FONT*/
+/*COLOR*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,8 +22,15 @@ a {
 }
 
 h1 {
+  font-family: "Readex Pro", sans-serif;
   font-size: 46px;
   text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 #first {
@@ -43,12 +54,23 @@ h1 {
   display: flex;
   padding-top: 150px;
 }
+@media (max-width: 767px) {
+  .company-box {
+    display: initial;
+  }
+}
 .company-box .company-content {
   color: #fff;
 }
 .company-box .company-content,
 .company-box .company-effect {
   width: 50%;
+}
+@media (max-width: 767px) {
+  .company-box .company-content,
+.company-box .company-effect {
+    width: 100%;
+  }
 }
 
 #drag-container,
@@ -324,6 +346,7 @@ p.modal-p {
 .websites {
   display: flex;
   margin-left: 42px;
+  padding-top: 150px;
 }
 
 .left-web,
@@ -384,7 +407,7 @@ img.img-port {
   object-fit: cover;
   transform: translateX(25%) translateY(-45%);
   top: 50%;
-  right: 0;
+  right: 35px;
   z-index: -10;
   opacity: 0;
   visibily: hidden;
