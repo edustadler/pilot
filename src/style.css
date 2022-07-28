@@ -304,10 +304,9 @@ p.modal-p {
 
 .modal-text {
   float: left;
-  width: 50%;
+  width: 100%;
   display: block;
   position: relative;
-  margin-left: 70px;
   margin-top: -75px;
 }
 
