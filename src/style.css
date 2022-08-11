@@ -61,6 +61,17 @@ h2 {
   text-align: center;
 }
 
+.btn-lightDark {
+  padding: 10px 25px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
 .highlight {
   background: linear-gradient(359deg, #ec4899, #8b5cf6);
   text-fill-color: transparent;
