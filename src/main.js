@@ -11,11 +11,11 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 var imgHeight = 170;
 setTimeout(init, 100);
 
-va
-var aImg = ospin.getElementsByTagName("ir odrag = document.getElementById("drag-container");
-var ospin = document.getElementById("spin-container");mg");
+var odrag = document.getElementById("drag-container");
+var ospin = document.getElementById("spin-container");
+var aImg = ospin.getElementsByTagName("img");
 var aVid = ospin.getElementsByTagName("video");
-var aEle = [...aImg, ...aVid];
+var aEle = [...aImg, ...aVid]; // combine 2 arrays
 
 ospin.style.width = imgWidth + "px";
 ospin.style.height = imgHeight + "px";
