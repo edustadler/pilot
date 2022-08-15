@@ -11,9 +11,9 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 var imgHeight = 170;
 setTimeout(init, 100);
 
-var odrag = document.getElementById("drag-container");
-var ospin = document.getElementById("spin-container");
-var aImg = ospin.getElementsByTagName("img");
+va
+var aImg = ospin.getElementsByTagName("ir odrag = document.getElementById("drag-container");
+var ospin = document.getElementById("spin-container");mg");
 var aVid = ospin.getElementsByTagName("video");
 var aEle = [...aImg, ...aVid];
 
